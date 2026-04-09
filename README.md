@@ -1,6 +1,4 @@
-# VLM-Token-Process
-
-**Research code for the paper: "Do Vision Language Models Need to Process Image Tokens?"**
+# Do Vision Language Models Need to Process Image Tokens?
 
 VLMs over-process images: visual tokens stabilize early, are depth-redundant, but still critical for multi-step reasoning tasks
 
