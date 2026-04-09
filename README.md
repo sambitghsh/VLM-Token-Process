@@ -5,8 +5,6 @@
 Structural evolution of the image tokens inside the decoder of VLM.
 
 ## Project Structure
-
-### Root Files
 - **`ground_truth_generation.py`** - Generates ground truth outputs from VLMs (Qwen2.5-VL, LLaVA) for evaluation and analysis
 
 ### Layer Sweep
