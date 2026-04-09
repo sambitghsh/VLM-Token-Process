@@ -2,7 +2,14 @@
 
 **Research code for the paper: "Do Vision Language Models Need to Process Image Tokens?"**
 
-Structural evolution of the image tokens inside the decoder of VLM.
+VLMs over-process images: visual tokens stabilize early, are depth-redundant, but still critical for multi-step reasoning tasks
+
+### Key Insights
+- Visual tokens stabilize early in VLMs, unlike text tokens which evolve across depth  
+- Deeper layers add limited new information to visual representations  
+- Visual depth is task-dependent: shallow is enough for classification, deep is needed for generation  
+- Image tokens shape reasoning paths more than final outputs  
+- Fine-tuning can recover truncated models, but not without sufficient visual depth  
 
 ## Project Structure
 - **`ground_truth_generation.py`** - Generates ground truth outputs from VLMs (Qwen2.5-VL, LLaVA) for evaluation and analysis
@@ -22,9 +29,3 @@ Structural evolution of the image tokens inside the decoder of VLM.
 - **`train/dataset.py`** - Dataset classes for loading and formatting vision-language training data (Qwen, LLaVA)
 - **`train/inference.py`** - Inference utilities for running trained/pruned VLM models with custom configurations
 - **`train/train.py`** - Training script with LoRA fine-tuning support and vision encoder freezing options
-
-## Features
-- Token pruning and layer optimization for VLMs
-- Information-theoretic metrics for layer analysis
-- Fine-tuning with LoRA adapters
-- Support for multiple VLM architectures (LLaVA, Qwen2.5-VL)
